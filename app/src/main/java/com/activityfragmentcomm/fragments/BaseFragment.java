@@ -3,7 +3,6 @@ package com.activityfragmentcomm.fragments;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 
 import com.activityfragmentcomm.activity.BaseActivity;
 import com.activityfragmentcomm.function.Functions;
@@ -26,7 +25,6 @@ public class BaseFragment extends Fragment{
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        Log.e("url", BaseFragment.class.getSimpleName());
         if(context instanceof BaseActivity){
             mBaseActivity = (BaseActivity)context;
             mBaseActivity.setFunctionsForFragment(getTag());
